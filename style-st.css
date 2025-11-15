@@ -278,10 +278,10 @@ footer {
 }
 
 /* -------------------------------------------------------------------------- */
-/* RESPONSIVE DESIGN (Media Queries)                                          */
+/* RESPONSIVE DESIGN (Media Queries) - Optimizadas para móvil                  */
 /* -------------------------------------------------------------------------- */
 
-/* Breakpoint para Tablet (Hasta 900px) */
+/* Breakpoint para Tablet y móvil grande (Hasta 900px) */
 @media (max-width: 900px) {
     /* Ajuste de fuentes para evitar tamaños excesivos en tablet */
     .hero h1 {
@@ -290,14 +290,16 @@ footer {
     .logo a {
         font-size: 2rem;
     }
-    
-    /* El GRID de personajes se adapta automáticamente por auto-fit */
 }
 
 /* Breakpoint para Móviles (Hasta 600px) */
 @media (max-width: 600px) {
     .container {
         width: 95%; /* Más ancho en móviles */
+    }
+    
+    main {
+        padding-top: 100px; /* Asegura espacio si el header es grande */
     }
 
     /* Menú Vertical (Requisito) */
@@ -311,6 +313,7 @@ footer {
         flex-direction: column; /* Menú de vertical */
         text-align: center;
         width: 100%;
+        gap: 0;
     }
     
     nav li {
@@ -320,11 +323,6 @@ footer {
     /* Reducción de fuentes */
     .hero h1 {
         font-size: 2.5rem;
-    }
-    
-    /* Reducción de padding de MAIN */
-    main {
-        padding-top: 100px;
     }
     
     /* Layout de Episodios: Apilamos imagen e información */
@@ -341,5 +339,12 @@ footer {
         width: 100%; /* Imágenes de episodio ocupan el ancho completo */
         max-width: 250px;
         height: auto;
+    }
+    
+    /* Formulario ocupa más ancho */
+    .formulario-fan {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 20px;
     }
 }
